@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4BASIC</title>
+    <style>
+        body
+        {
+            background-color: aquamarine;
+            color: black;
+            text-align: center;
+            font-size: medium;
+            font: 200;
+        }
+        div#adi
+        {
+            text-align: justify;
+        }
+        div#sub
+        {
+            text-align: justify;
+        }
+        div#mult
+        {
+            text-align: justify;
+        }
+        div#divi
+        {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>4 OPERAÇÕES BASICAS</h1>
+    <input type="number" name="ctn1" id="ctn1"> &
+    <input type="number" name="ctn2" id="ctn2">
+    <input type="button" value="CALCULAR" onclick="calcular()">
+    <div id="adi">Resultado: </div>
+    <div id="sub">Resultado: </div>
+    <div id="mult">Resultado: </div>
+    <div id="divi">Resultado: </div>
+    <script>
+        function calcular() 
+        {
+            var ctn1 = window.document.getElementById('ctn1')
+            var ctn2 = window.document.getElementById('ctn2')
+            var res1 = window.document.getElementById('adi')
+            var res2 = window.document.getElementById('sub')
+            var res3 = window.document.getElementById('mult')
+            var res4 = window.document.getElementById('divi')
+            //Agora é necessario transformar as caixas de texto de ctn1 e 2 em numeros, até agora estao como txt
+            var n1 = Number(ctn1.value)
+            var n2 = Number(ctn2.value)
+            //Agora é necessario criar variaveis que pedem cada operacao com os numeros
+            var adi = n1 + n2
+            var sub = n1 - n2
+            var mult = n1 * n2
+            var divi = n1 / n2
+            res1.innerHTML = `A soma de ${n1} + ${n2} é igual a: ${adi}`
+            res2.innerHTML = `A subtracao de ${n1} - ${n2} é igual a: ${sub}`
+            res3.innerHTML = `A multiplicacao de ${n1} * ${n2} é igual a: ${mult}`
+            res4.innerHTML = `A divisao de ${n1} / ${n2} é igual a: ${divi}`
+        }
+    </script>
+
+</body>
+</html>
